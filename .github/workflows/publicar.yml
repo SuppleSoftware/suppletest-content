@@ -1,0 +1,54 @@
+name: Publicar contenido
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/**", "imagenes/**", "sheet.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ¿Está configurado el Sheet?
+        id: cfg
+        run: |
+          if python3 -c "import json,sys; sys.exit(0 if json.load(open('sheet.json'))['id'] else 1)"; then
+            echo "listo=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::sheet.json no tiene el id del Sheet: no hay nada que publicar todavía"
+          fi
+
+      - name: Tests del generador
+        if: steps.cfg.outputs.listo == 'true'
+        run: python3 -m unittest discover -s scripts -v
+
+      - name: Generar contenido desde el Sheet
+        if: steps.cfg.outputs.listo == 'true'
+        run: python3 scripts/build.py
+
+      - name: Publicar si hay cambios
+        if: steps.cfg.outputs.listo == 'true'
+        run: |
+          git config user.name "suppletest-bot"
+          git config user.email "suppletest-bot@users.noreply.github.com"
+          git add -A content.json manifest.json images
+          if git diff --cached --quiet; then
+            echo "Sin cambios en el contenido"
+          else
+            version=$(python3 -c "import json; print(json.load(open('manifest.json'))['version'])")
+            git commit -m "chore: actualizar contenido desde el Sheet ($version)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
