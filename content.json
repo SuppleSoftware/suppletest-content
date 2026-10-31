@@ -23,6 +23,12 @@
    "nombre": "Administración de Bases de Datos",
    "curso": "Tercero",
    "cuatrimestre": "Segundo"
+  },
+  {
+   "id": 5,
+   "nombre": "Test",
+   "curso": "primero",
+   "cuatrimestre": "primero"
   }
  ],
  "temarios": [
