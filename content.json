@@ -1123,7 +1123,7 @@
    "temarioId": 2,
    "numero": 649,
    "tipo": "VerdaderoFalso",
-   "enunciado": "Hay una serie de productos marcados con un determinado precio y que pertenecen a distintas Categorías.\n¿Qué obtiene la siguiente consulta?\nvar categorias =\n    from p in productos\n    group p by p.Categoria into g\n    select new\n    {\n        Categoria = g.Key,\n        ProductoMedio = g.Average()\n    };\n",
+   "enunciado": "Hay una serie de productos marcados con un determinado precio y que pertenecen a distintas Categorías.\n¿Qué obtiene la siguiente consulta?\nvar categorias =\n    from p in productos\n    group p by p.Categoria into g\n    select new\n    {\n        Categoria = g.Key,\n        ProductoMedio = g.Average()\n    };",
    "comentario": null,
    "imagenId": null,
    "respuestas": [
@@ -5742,7 +5742,7 @@
    "numero": 251,
    "tipo": "VerdaderoFalso",
    "enunciado": "La rutina de tratamiento de una señal está incluida en el código del sistema operativo.",
-   "comentario": "La rutina de tratamiento de una señal (signal handler) no está incluida en el código del sistema operativo, sino que es una función definida por el usuario (o por la librería estándar).\n",
+   "comentario": "La rutina de tratamiento de una señal (signal handler) no está incluida en el código del sistema operativo, sino que es una función definida por el usuario (o por la librería estándar).",
    "imagenId": null,
    "respuestas": [
     {
@@ -11071,7 +11071,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Al ejecutar el programa",
    "comentario": "Cada llamada recursiva queda en espera hasta que se introduce 0; después, las impresiones ocurren en orden inverso (4 3 2 1).",
-   "imagenId": 1,
+   "imagenId": 138788552,
    "respuestas": [
     {
      "id": 833,
@@ -11112,7 +11112,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Dado el programa cuyo ejecutable se llamará p:",
    "comentario": "Con ./p verde rojo, primero entra al caso \"verde\", luego al caso \"rojo\" (ya que i=2 solo evita el mensaje si fuera \"rojo\" en posición 2, pero aquí sí se cumple la impresión).",
-   "imagenId": 2,
+   "imagenId": 10959482,
    "respuestas": [
     {
      "id": 839,
@@ -11148,7 +11148,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué se imprime al ejecutar el siguiente programa?",
    "comentario": "El puntero no se incrementa en ningún sitio: *x permanece en 3, el while no termina y se imprime infinitamente x[1] (88). Por eso la opción correcta es “Ninguna de las anteriores”.",
-   "imagenId": 3,
+   "imagenId": 118112662,
    "respuestas": [
     {
      "id": 844,
@@ -11220,7 +11220,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Si el resultado de compilar y enlazar el programa es el ejecutable prog, ¿qué imprimirá el siguiente comando? $ ./prog lunes martes",
    "comentario": "Tras incrementar argv, el puntero se desplaza una posición: *argv apunta a \"lunes\" y argv[1] a \"martes\", por eso la salida completa es lunes lunes martes.",
-   "imagenId": 4,
+   "imagenId": 242298867,
    "respuestas": [
     {
      "id": 854,
@@ -11256,7 +11256,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Indicar qué resultado se produce al ejecutar el programa",
    "comentario": "p y dato1 son el mismo objeto; asignar p->c=\"a\" modifica dato1.c. Por eso se imprime 2,a,a.",
-   "imagenId": 5,
+   "imagenId": 30370109,
    "respuestas": [
     {
      "id": 859,
@@ -11292,7 +11292,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime el programa, si al ejecutarlo se introducen los valores 3 y 4 para las variables a y b?",
    "comentario": "Solo b cambia dentro de fun (ya que se pasa por puntero). a sigue siendo 3.0, mientras que b se actualiza a -1.0.",
-   "imagenId": 6,
+   "imagenId": 6928064,
    "respuestas": [
     {
      "id": 864,
@@ -12044,7 +12044,7 @@
     },
     {
      "id": 995,
-     "texto": "Ninguna de las anteriores ",
+     "texto": "Ninguna de las anteriores",
      "correcta": false
     },
     {
@@ -12815,7 +12815,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime el siguiente programa en C?",
    "comentario": "No imprime \"SARA\" porque fun1() no altera la estructura real, solo una copia local.",
-   "imagenId": 7,
+   "imagenId": 196472202,
    "respuestas": [
     {
      "id": 1101,
@@ -12887,7 +12887,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Suponiendo que el ejecutable se llama PROG, ¿qué imprime al ejecutar PROG examen 5 con el código mostrado?",
    "comentario": "c=1, c=2, c=0: no ocurren porque, cumpliéndose la condición, c toma el valor numérico del tercer argumento (5), no 1/2/0.",
-   "imagenId": 8,
+   "imagenId": 25796911,
    "respuestas": [
     {
      "id": 1177,
@@ -14299,7 +14299,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "La función:",
    "comentario": null,
-   "imagenId": 10,
+   "imagenId": 10753345,
    "respuestas": [
     {
      "id": 1477,
@@ -14330,7 +14330,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Dado el array dinámico a de 5 elementos de tipo int, queremos ampliar a 10 su número de elementos, sin perder la información que ya existía almacenada en el array original y rellenando a 0 los nuevos elementos. Suponer que no existirán problemas de falta de memoria. ¿Cuál de las secuencias de instrucciones NO hace lo especificado en el enunciado?",
    "comentario": null,
-   "imagenId": 11,
+   "imagenId": 72969219,
    "respuestas": [
     {
      "id": 1481,
@@ -14361,7 +14361,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Si el resultado de compilar y enlazar el programa se llama prog, ¿qué imprimirá el siguiente comando? $ ./prog lunes martes",
    "comentario": null,
-   "imagenId": 12,
+   "imagenId": 119303001,
    "respuestas": [
     {
      "id": 1485,
@@ -14423,7 +14423,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime el programa, si al ejecutarlo se introducen los valores 3 y 4 para las variables a y b?",
    "comentario": null,
-   "imagenId": 13,
+   "imagenId": 178902512,
    "respuestas": [
     {
      "id": 1495,
@@ -14610,7 +14610,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime el programa?",
    "comentario": null,
-   "imagenId": 14,
+   "imagenId": 196104255,
    "respuestas": [
     {
      "id": 1519,
@@ -14672,7 +14672,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Queremos que el programa permita intercambiar los dos valores del array a ¿Qué función sería incorrecta?",
    "comentario": null,
-   "imagenId": 15,
+   "imagenId": 221133785,
    "respuestas": [
     {
      "id": 1527,
@@ -14906,7 +14906,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime el programa?",
    "comentario": null,
-   "imagenId": 16,
+   "imagenId": 210794682,
    "respuestas": [
     {
      "id": 1558,
@@ -14937,7 +14937,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Al ejecutar el programa",
    "comentario": null,
-   "imagenId": 17,
+   "imagenId": 138300807,
    "respuestas": [
     {
      "id": 1562,
@@ -15332,7 +15332,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Indicar qué resultado se produce al ejecutar el programa",
    "comentario": null,
-   "imagenId": 18,
+   "imagenId": 23894334,
    "respuestas": [
     {
      "id": 1612,
@@ -15579,7 +15579,7 @@
    "temarioId": 6,
    "numero": 639,
    "tipo": "OpcionUnica",
-   "enunciado": "¿Cuál es la diferencia entre MPI_Wait() y MPI_Test()? ",
+   "enunciado": "¿Cuál es la diferencia entre MPI_Wait() y MPI_Test()?",
    "comentario": "Las demás opciones invierten la naturaleza bloqueante/no bloqueante o asocian erróneamente cada rutina a tipos concretos de envío o recepción.",
    "imagenId": null,
    "respuestas": [
@@ -15776,7 +15776,7 @@
    "temarioId": 6,
    "numero": 655,
    "tipo": "OpcionUnica",
-   "enunciado": "¿Cuándo retorna la rutina MPI_Recv()? ",
+   "enunciado": "¿Cuándo retorna la rutina MPI_Recv()?",
    "comentario": "Las otras opciones suponen que MPI_Recv puede finalizar antes de copiar los datos o que depende de tiempos, algo que es completamente falso en el modelo MPI.",
    "imagenId": null,
    "respuestas": [
@@ -15885,7 +15885,7 @@
    "temarioId": 6,
    "numero": 659,
    "tipo": "OpcionUnica",
-   "enunciado": "¿Qué realiza la rutina MPI_Wtime()? ",
+   "enunciado": "¿Qué realiza la rutina MPI_Wtime()?",
    "comentario": "No mide el tiempo de ejecución del proceso ni genera pausas, por lo que no se comporta como un temporizador bloqueante.",
    "imagenId": null,
    "respuestas": [
@@ -16020,7 +16020,7 @@
    "temarioId": 6,
    "numero": 664,
    "tipo": "OpcionUnica",
-   "enunciado": "¿Cuáles son los principales riesgos del MPI_Ssend()? ",
+   "enunciado": "¿Cuáles son los principales riesgos del MPI_Ssend()?",
    "comentario": "Las demás opciones capturan solo uno de los riesgos pero Ssend presenta múltiples peligros simultáneos.",
    "imagenId": null,
    "respuestas": [
@@ -16339,7 +16339,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Si rank en el siguiente código es el rango del proceso actual y size es el número de procesos MPI en el comunicador, ¿qué sentencia es verdadera?",
    "comentario": "Las otras opciones suponen sincronización global, orden serializado o cambios en todos los procesos, cosas que no ocurren salvo que añadas sincronización explícita como barreras.",
-   "imagenId": 19,
+   "imagenId": 104663913,
    "respuestas": [
     {
      "id": 1764,
@@ -16692,7 +16692,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime el programa?",
    "comentario": "Como transferir() recibe un puntero, las asignaciones dentro de la función afectan al mismo objeto en memoria, sobrescribiendo los valores de \"Luis Sanchez\" y 7.50. El resultado final es Juan Garcia, 9.80.",
-   "imagenId": 9,
+   "imagenId": 250233543,
    "respuestas": [
     {
      "id": 1806,
@@ -18928,7 +18928,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué se imprime al ejecutar el siguiente programa?:",
    "comentario": null,
-   "imagenId": 20,
+   "imagenId": 187562007,
    "respuestas": [
     {
      "id": 2027,
@@ -18937,7 +18937,7 @@
     },
     {
      "id": 2028,
-     "texto": " 3 ",
+     "texto": "3",
      "correcta": false
     },
     {
@@ -18964,7 +18964,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Indicar qué resultado se produce al ejecutar el programa:",
    "comentario": null,
-   "imagenId": 21,
+   "imagenId": 66546173,
    "respuestas": [
     {
      "id": 2032,
@@ -19000,7 +19000,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Indicar qué sentencias hay que sustituir por el comentario para que, al ejecutar el programa imprima el valor de x",
    "comentario": null,
-   "imagenId": 22,
+   "imagenId": 232469427,
    "respuestas": [
     {
      "id": 2037,
@@ -19036,7 +19036,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime el programa?",
    "comentario": null,
-   "imagenId": 23,
+   "imagenId": 134536515,
    "respuestas": [
     {
      "id": 2042,
@@ -19072,7 +19072,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "El programa, ¿qué imprime en pantalla?",
    "comentario": null,
-   "imagenId": 24,
+   "imagenId": 95837389,
    "respuestas": [
     {
      "id": 2047,
@@ -19108,7 +19108,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime el programa, si al ejecutarlo se introducen los valores 3 y 4 para las variables a y b?",
    "comentario": null,
-   "imagenId": 25,
+   "imagenId": 114153739,
    "respuestas": [
     {
      "id": 2052,
@@ -19144,7 +19144,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime programa?",
    "comentario": null,
-   "imagenId": 26,
+   "imagenId": 41215650,
    "respuestas": [
     {
      "id": 2057,
@@ -19180,7 +19180,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Dado el array dinámico a de 5 elementos de tipo int, queremos ampliar a 10 su número de elementos, sin perder la información que ya existía almacenada en el array original y rellenando a 0 los nuevos elementos.Suponer que no existirán problemas de falta de memoria.¿Cuál de las secuencias de instrucciones NO hace lo especificado en el enunciado?",
    "comentario": null,
-   "imagenId": 27,
+   "imagenId": 48226403,
    "respuestas": [
     {
      "id": 2062,
@@ -19216,7 +19216,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Indicar que sentencias hay que sustituir por el comentario en el para que se impriman todos los datos del array a.",
    "comentario": null,
-   "imagenId": 28,
+   "imagenId": 241452141,
    "respuestas": [
     {
      "id": 2067,
@@ -19252,7 +19252,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "¿Qué imprime el programa?",
    "comentario": null,
-   "imagenId": 29,
+   "imagenId": 135593391,
    "respuestas": [
     {
      "id": 2072,
@@ -19288,7 +19288,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Al ejecutar el programa",
    "comentario": null,
-   "imagenId": 30,
+   "imagenId": 216712402,
    "respuestas": [
     {
      "id": 2077,
@@ -19324,7 +19324,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Queremos que el programa permita intercambiar los dos valores del array a. ¿Que función sería incorrecta?",
    "comentario": null,
-   "imagenId": 31,
+   "imagenId": 4343155,
    "respuestas": [
     {
      "id": 2082,
@@ -19360,7 +19360,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Suponiendo que se ha dado la orden de compilación gcc prog.c, indicar qué imprime el programa cuando se ejecuta la orden: ./a.out lunes_ martes_ miercoles_",
    "comentario": null,
-   "imagenId": 32,
+   "imagenId": 202740298,
    "respuestas": [
     {
      "id": 2087,
@@ -19396,7 +19396,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Si el resultado de compilar y enlazar el programa es el ejecutable prog, ¿qué imprimirá el siguiente comando?\n   $ ./prog lunes martes",
    "comentario": null,
-   "imagenId": 33,
+   "imagenId": 69378231,
    "respuestas": [
     {
      "id": 2092,
@@ -19432,7 +19432,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Dado el programa cuyo ejecutable se llamará p:",
    "comentario": null,
-   "imagenId": 34,
+   "imagenId": 228508755,
    "respuestas": [
     {
      "id": 2097,
@@ -19468,7 +19468,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Encuentra el error, si lo hay, en el código",
    "comentario": null,
-   "imagenId": 35,
+   "imagenId": 125064648,
    "respuestas": [
     {
      "id": 2102,
@@ -19504,7 +19504,7 @@
    "tipo": "OpcionUnica",
    "enunciado": "Suponiendo que el programa ejecutable que se obtiene al compilar programa se llama PROG.",
    "comentario": null,
-   "imagenId": 36,
+   "imagenId": 72001650,
    "respuestas": [
     {
      "id": 2107,
@@ -19536,148 +19536,148 @@
  ],
  "imagenes": [
   {
-   "id": 1,
-   "archivo": "images/1.jpg"
+   "id": 4343155,
+   "archivo": "images/pregunta-758-5d236ca4.png"
   },
   {
-   "id": 2,
-   "archivo": "images/2.jpg"
+   "id": 6928064,
+   "archivo": "images/pregunta-364-f29b7ee8.jpg"
   },
   {
-   "id": 3,
-   "archivo": "images/3.jpg"
+   "id": 10753345,
+   "archivo": "images/pregunta-586-6067ab2b.jpg"
   },
   {
-   "id": 4,
-   "archivo": "images/4.jpg"
+   "id": 10959482,
+   "archivo": "images/pregunta-359-3913076b.jpg"
   },
   {
-   "id": 5,
-   "archivo": "images/5.jpg"
+   "id": 23894334,
+   "archivo": "images/pregunta-630-d9365e95.jpg"
   },
   {
-   "id": 6,
-   "archivo": "images/6.jpg"
+   "id": 25796911,
+   "archivo": "images/pregunta-466-004bda2a.jpg"
   },
   {
-   "id": 7,
-   "archivo": "images/7.jpg"
+   "id": 30370109,
+   "archivo": "images/pregunta-363-8087c0cd.jpg"
   },
   {
-   "id": 8,
-   "archivo": "images/8.jpg"
+   "id": 41215650,
+   "archivo": "images/pregunta-753-6691685a.png"
   },
   {
-   "id": 9,
-   "archivo": "images/9.jpg"
+   "id": 48226403,
+   "archivo": "images/pregunta-754-dddfc725.png"
   },
   {
-   "id": 10,
-   "archivo": "images/10.jpg"
+   "id": 66546173,
+   "archivo": "images/pregunta-748-991bb705.png"
   },
   {
-   "id": 11,
-   "archivo": "images/11.jpg"
+   "id": 69378231,
+   "archivo": "images/pregunta-760-c70cfe40.png"
   },
   {
-   "id": 12,
-   "archivo": "images/12.jpg"
+   "id": 72001650,
+   "archivo": "images/pregunta-763-de287fc4.png"
   },
   {
-   "id": 13,
-   "archivo": "images/13.jpg"
+   "id": 72969219,
+   "archivo": "images/pregunta-587-e5de15e7.jpg"
   },
   {
-   "id": 14,
-   "archivo": "images/14.jpg"
+   "id": 95837389,
+   "archivo": "images/pregunta-751-bde1d256.png"
   },
   {
-   "id": 15,
-   "archivo": "images/15.jpg"
+   "id": 104663913,
+   "archivo": "images/pregunta-676-7c33cfe8.jpg"
   },
   {
-   "id": 16,
-   "archivo": "images/16.jpg"
+   "id": 114153739,
+   "archivo": "images/pregunta-752-9f79e98e.png"
   },
   {
-   "id": 17,
-   "archivo": "images/17.jpg"
+   "id": 118112662,
+   "archivo": "images/pregunta-360-6ac3a5f3.jpg"
   },
   {
-   "id": 18,
-   "archivo": "images/18.jpg"
+   "id": 119303001,
+   "archivo": "images/pregunta-588-86741a76.jpg"
   },
   {
-   "id": 19,
-   "archivo": "images/19.jpg"
+   "id": 125064648,
+   "archivo": "images/pregunta-762-ade2ab58.png"
   },
   {
-   "id": 20,
-   "archivo": "images/20.png"
+   "id": 134536515,
+   "archivo": "images/pregunta-750-f8d2e5ad.png"
   },
   {
-   "id": 21,
-   "archivo": "images/21.png"
+   "id": 135593391,
+   "archivo": "images/pregunta-756-b93b7518.png"
   },
   {
-   "id": 22,
-   "archivo": "images/22.png"
+   "id": 138300807,
+   "archivo": "images/pregunta-614-84ef41e3.jpg"
   },
   {
-   "id": 23,
-   "archivo": "images/23.png"
+   "id": 138788552,
+   "archivo": "images/pregunta-358-9a0bccb5.jpg"
   },
   {
-   "id": 24,
-   "archivo": "images/24.png"
+   "id": 178902512,
+   "archivo": "images/pregunta-591-37de5378.jpg"
   },
   {
-   "id": 25,
-   "archivo": "images/25.png"
+   "id": 187562007,
+   "archivo": "images/pregunta-747-1d0151d0.png"
   },
   {
-   "id": 26,
-   "archivo": "images/26.png"
+   "id": 196104255,
+   "archivo": "images/pregunta-599-232925c1.jpg"
   },
   {
-   "id": 27,
-   "archivo": "images/27.png"
+   "id": 196472202,
+   "archivo": "images/pregunta-431-38a32b4c.jpg"
   },
   {
-   "id": 28,
-   "archivo": "images/28.png"
+   "id": 202740298,
+   "archivo": "images/pregunta-759-27fc6180.png"
   },
   {
-   "id": 29,
-   "archivo": "images/29.png"
+   "id": 210794682,
+   "archivo": "images/pregunta-613-8f3e1041.jpg"
   },
   {
-   "id": 30,
-   "archivo": "images/30.png"
+   "id": 216712402,
+   "archivo": "images/pregunta-757-2a36d867.png"
   },
   {
-   "id": 31,
-   "archivo": "images/31.png"
+   "id": 221133785,
+   "archivo": "images/pregunta-601-bdbaf85d.jpg"
   },
   {
-   "id": 32,
-   "archivo": "images/32.png"
+   "id": 228508755,
+   "archivo": "images/pregunta-761-0ad41416.png"
   },
   {
-   "id": 33,
-   "archivo": "images/33.png"
+   "id": 232469427,
+   "archivo": "images/pregunta-749-5531460b.png"
   },
   {
-   "id": 34,
-   "archivo": "images/34.png"
+   "id": 241452141,
+   "archivo": "images/pregunta-755-eb4140b2.png"
   },
   {
-   "id": 35,
-   "archivo": "images/35.png"
+   "id": 242298867,
+   "archivo": "images/pregunta-362-50b2aad8.jpg"
   },
   {
-   "id": 36,
-   "archivo": "images/36.png"
+   "id": 250233543,
+   "archivo": "images/pregunta-689-26a083ba.jpg"
   }
  ]
 }
