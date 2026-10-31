@@ -5,7 +5,7 @@ de `https://supplesoftware.github.io/suppletest-content/`, así que añadir o co
 requiere publicar una versión nueva.
 
 ```
-Google Sheet ──(cada 30 min / a mano)──▶ GitHub Action ──▶ content.json + manifest.json + images/ ──▶ GitHub Pages ──▶ app
+Google Sheet ──(a mano)──▶ GitHub Action ──▶ content.json + manifest.json + images/ ──▶ GitHub Pages ──▶ app
 ```
 
 - **No edites** `content.json`, `manifest.json` ni `images/`: los genera el Action y se sobrescriben.
@@ -51,8 +51,8 @@ exactamente 2 respuestas.
 3. Rellena `sheet.json`:
    - `id`: el tramo de la URL entre `/d/` y `/edit`.
    - `hojas`: el número `gid=` que aparece en la URL al abrir cada pestaña.
-4. Haz commit y push. En **Actions → Publicar contenido → Run workflow** se lanza a mano; después se ejecuta solo
-   cada 30 minutos y cuando cambia `imagenes/` o `scripts/`.
+4. Haz commit y push. El workflow **no se ejecuta solo**: cada vez que quieras publicar los cambios del Sheet, ve a
+   **Actions → Publicar contenido → Run workflow**.
 
 Hasta que `sheet.json` tenga el `id`, el workflow no hace nada.
 
@@ -77,14 +77,9 @@ Para probar la app con otro origen (escritorio): `SUPPLETEST_CONTENT_URL=http://
 
 ## Deshacer un cambio
 
-El historial de git guarda cada versión publicada. Pero ojo: el Action regenera todo desde el Sheet, así que
-**revertir un commit no basta**: corrige el Sheet (Archivo → Historial de versiones permite restaurarlo) o
-desactiva el workflow mientras tanto.
-
-## Mantenimiento
-
-GitHub desactiva los workflows programados tras 60 días sin actividad en el repo. Si el contenido deja de
-actualizarse, entra en **Actions** y reactívalo.
+El historial de git guarda cada versión publicada. Pero ojo: cada vez que ejecutes el Action se regenera todo desde
+el Sheet, así que **revertir un commit no basta**: corrige el Sheet (Archivo → Historial de versiones permite
+restaurarlo) antes de volver a ejecutarlo.
 
 ## Formato publicado (contrato con la app)
 

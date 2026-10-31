@@ -1,12 +1,8 @@
 name: Publicar contenido
 
+# Solo se ejecuta a mano: Actions -> Publicar contenido -> Run workflow
 on:
-  schedule:
-    - cron: "*/30 * * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ["scripts/**", "imagenes/**", "sheet.json"]
 
 permissions:
   contents: write
