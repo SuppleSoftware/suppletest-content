@@ -56,6 +56,19 @@ exactamente 2 respuestas.
 
 Hasta que `sheet.json` tenga el `id`, el workflow no hace nada.
 
+## Diseño del Sheet (panel y validaciones)
+
+`sheet/Codigo.gs` es un Apps Script que da formato al Sheet sin tocar datos ni cabeceras:
+
+1. En el Sheet: **Extensiones → Apps Script**, pega el contenido de `sheet/Codigo.gs`, guarda y recarga el Sheet.
+2. Menú **SuppleTest → Aplicar diseño** (la primera vez pide permisos). Repítelo tras añadir muchas filas.
+
+Añade: cabeceras de color, fila fija, filtros, bandas, enunciados en una línea (el texto completo se ve al
+seleccionar la celda), desplegables (`tipo`, `curso`, `cuatrimestre`), checkboxes en `correcta`, validación de ids
+(`temario_id`, `asignatura_id`, `pregunta_id`), duplicados en rojo, columnas `(auto)` en gris (nombre de asignatura/temario,
+nº de respuestas, estado ✔/⚠) y una hoja **Panel** con totales, tablas por asignatura/temario, gráfico y lista de avisos.
+El generador ignora las columnas `(auto)` y la hoja `Panel`.
+
 ## Subir una imagen
 
 1. Copia el archivo a `imagenes/` (commit y push, o desde la web de GitHub con *Add file → Upload files*).

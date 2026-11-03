@@ -80,7 +80,9 @@ def filas(hoja, texto, errores):
     resultado = []
     for n, fila in enumerate(lector, start=2):
         valores = {c: (fila[i].replace("\r\n", "\n").strip() if i < len(fila) else "") for i, c in enumerate(cabecera)}
-        if any(valores.values()):
+        # Ignora filas vacías. Las columnas "(auto)" (fórmulas) y un checkbox sin marcar (FALSE) no cuentan como datos.
+        datos = [v for c, v in valores.items() if not c.endswith("(auto)") and not (c == "correcta" and v.upper() == "FALSE")]
+        if any(datos):
             resultado.append((n, valores))
     return resultado
 

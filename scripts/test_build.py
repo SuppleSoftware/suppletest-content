@@ -87,6 +87,12 @@ class ConstruirTest(unittest.TestCase):
         c, _, _ = build.construir(hojas(Preguntas=preg, Respuestas=resp), Path("/no/existe"))
         self.assertEqual(c["preguntas"][0]["enunciado"], "línea 1\nlínea 2, con coma")
 
+    def test_ignora_filas_vacias_con_checkbox_y_columnas_auto(self):
+        preg = "id,temario_id,tipo,enunciado,estado (auto)\n1,1,OpcionUnica,Hola,ok\n,,,,\n"
+        resp = "pregunta_id,texto,correcta,pregunta (auto)\n1,A,TRUE,Hola\n,,FALSE,\n,,FALSE,\n"
+        c, _, _ = build.construir(hojas(Preguntas=preg, Respuestas=resp), Path("/no/existe"))
+        self.assertEqual(len(c["preguntas"]), 1)
+
 
 class ImagenesTest(unittest.TestCase):
 
